@@ -105,18 +105,21 @@ export class GuiModel {
                     ]
                 },
                 {
-                    "id": "AddActivityForm",
+                    "id": "ActivityForm",
                     "title": "Activity",
-                    "url": "/friend/:friendKey/activity",
+                    "url": "/activity",
                     "formFieldList": [
                         {
-                            "id":   "activity",
-                            "type": "autocomplete",
-                            "name": "Activity",
-                            "url": "/activity",
-                            "defaultKey": "activityKey",
-                            "readonly": true,
-                            "form": "ActivityForm",
+                            "id": "name",
+                            "type": "text",
+                            "name": "Name",
+                            "width": 2,
+                            "required": true
+                        },
+                        {
+                            "id": "date",
+                            "type": "date",
+                            "name": "Date",
                             "width": 2
                         },
                         {
@@ -173,6 +176,13 @@ export class GuiModel {
                         },
                         {
                             "type": "button",
+                            "name": "Activities",
+                            "icon": "fa-user",
+                            "color": "red",
+                            "page": "activitypage",
+                        },
+                        {
+                            "type": "button",
                             "name": "Location",
                             "icon": "fa-cubes",
                             "color": "yellow",
@@ -214,6 +224,31 @@ export class GuiModel {
                         },
                     ]
                 },
+                {
+                    "id": "activitypage",
+                    "elementList": [
+                        {
+                            "type": "backbutton",
+                        },
+                        {
+                            "type": "newButton",
+                            "name": "NewActivity",
+                            "icon": "fa-user",
+                            "color": "green",
+                            "form": {
+                                "form": "ActivityForm"
+                            }
+                        },
+                        {
+                            "type": "list",
+                            "icon": "fa-user",
+                            "color": "blue",
+                            "search": true,
+                            "url": "/activity",
+                            "form": {
+                                "form": "ActivityForm"
+                            }
+                        },
                 {
                     "id": "locationspage",
                     "elementList": [
@@ -270,8 +305,8 @@ export class GuiModel {
                     ]
                 },
             ]
-        }
-    };
+        }]
+    }};
 
 
     get guiModel() {
