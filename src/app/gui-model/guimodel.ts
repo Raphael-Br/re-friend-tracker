@@ -35,7 +35,7 @@ export class GuiModel {
                             "required": true
                         },
                         {
-                            "id":   "location",
+                            "id": "location",
                             "type": "autocomplete",
                             "name": "Location",
                             "url": "/location",
@@ -161,7 +161,7 @@ export class GuiModel {
                         }
                     ]
                 }
-            ],
+            ], // formList
             "pageList": [
                 {
                     "id": "mainmenu",
@@ -248,7 +248,9 @@ export class GuiModel {
                             "form": {
                                 "form": "ActivityForm"
                             }
-                        },
+                        }
+                    ]
+                },
                 {
                     "id": "locationspage",
                     "elementList": [
@@ -290,7 +292,7 @@ export class GuiModel {
                             "color": "green",
                             "form": {
                                 "form": "GroupForm"
-                                }
+                            }
                         },
                         {
                             "type": "list",
@@ -304,9 +306,9 @@ export class GuiModel {
                         },
                     ]
                 },
-            ]
-        }]
-    }};
+            ] // pageList
+        } // application
+    }; // guiModel
 
 
     get guiModel() {
