@@ -79,6 +79,33 @@ export class GuiModel {
                     ]
                 },
                 {
+                    "id": "AddFriendForm",
+                    "title": "AddFriend",
+                    "url": "/friend",
+                    "formFieldList": [
+                        {
+                            "id": "group",
+                            "type": "autocomplete",
+                            "name": "Friend",
+                            "url": "/friend",
+                            "form": "AddFriendForm",
+                            "width": 2
+                        },
+                        {
+                            "type": "deleteButton",
+                            "name": "Delete"
+                        },
+                        {
+                            "type": "cancelButton",
+                            "name": "Cancel"
+                        },
+                        {
+                            "type": "okButton",
+                            "name": "Ok"
+                        }
+                    ]
+                },
+                {
                     "id": "LocationForm",
                     "title": "Location",
                     "url": "/location",
@@ -295,8 +322,7 @@ export class GuiModel {
                             "color": "blue",
                             "form": {"form": "FriendForm"}
                         },
-                        // TODO Add Activity to Friend
-                        {
+                        { // TODO Korr "Add Activity to Friend"
                             "type": "newButton",
                             "name": "AddActivity",
                             "icon": "fa-plus",
@@ -351,19 +377,25 @@ export class GuiModel {
                             "name": "EditActivity",
                             "icon": "fa-pencil-alt",
                             "color": "blue",
-                            // "search": true,
-                            // "url": "/activity",
                             "form": {"form": "ActivityForm"}
                         },
                         // TODO Add Friend to Activity
                         {
+                            "type": "newButton",
+                            "name": "AddFriend",
+                            "icon": "fa-plus",
+                            "color": "green",
+                            "form": {
+                                "form": "AddFriendForm"
+                            }
+                        },
+                        { // List Friends by Activity
                             "type": "list",
                             "icon": "fa-weixin",
                             "color": "wisteria",
-                            "search": true,
+                            "search": false,
                             "url": "/activity/:activityKey/friend",
-                            "form": {
-                                "form": "FriendForm" }
+                            "form": {"form": "FriendForm"}
                         }
                     ]
                 },
