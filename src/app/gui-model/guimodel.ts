@@ -122,6 +122,13 @@ export class GuiModel {
                             "name": "Date",
                             "width": 2
                         },
+                        // add Location
+                        {
+                            "id": "location",
+                            "type": "autocomplete", "name": "Location",
+                            "url": "/location",
+                            "form": "LocationForm",
+                            "width": 2 },
                         {
                             "type": "deleteButton",
                             "name": "Delete"
