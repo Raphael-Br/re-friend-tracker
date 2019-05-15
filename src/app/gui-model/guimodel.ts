@@ -374,10 +374,40 @@ export class GuiModel {
                             "color": "blue",
                             "search": true,
                             "url": "/location",
+                            "page": "locationspagedetail"
+                            // "form": {"form": "LocationForm"}
+                        },
+                    ]
+                },
+                {
+                    "id": "locationspagedetail",
+                    "elementList": [
+                        {
+                            "type": "backbutton",
+                        },
+                        // Edit
+                        {
+                            "type": "button",
+                            "name": "EditLocation",
+                            "icon": "fa-pencil",
+                            "color": "green",
+                            "width": 2,
+                            "url": "/location",
                             "form": {
                                 "form": "LocationForm"
                             }
                         },
+                        // Activity List per Location
+                        {
+                            "type": "list",
+                            "icon": "fa-hiking",
+                            "color": "blue",
+                            "search": true,
+                            "url": "/location/:locationKey/activity",
+                            "form": {
+                                "form": "ActivityForm"
+                            }
+                        }
                     ]
                 },
                 {
