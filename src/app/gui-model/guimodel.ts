@@ -379,7 +379,7 @@ export class GuiModel {
                             "color": "blue",
                             "form": {"form": "ActivityForm"}
                         },
-                        // TODO Add Friend to Activity
+                        // TODO Korr. "Add Friend to Activity"
                         {
                             "type": "newButton",
                             "name": "AddFriend",
