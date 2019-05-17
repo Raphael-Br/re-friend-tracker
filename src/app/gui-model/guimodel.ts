@@ -187,7 +187,7 @@ export class GuiModel {
                 {
                     "id": "AddActivityForm",
                     "title": "Activity",
-                    "url": "/activity",
+                    "url": "/friend/:friendKey/activity",
                     "formFieldList": [
                         {
                             "id": "activity",
@@ -322,8 +322,8 @@ export class GuiModel {
                             "color": "blue",
                             "form": {"form": "FriendForm"}
                         },
-                        { // TODO Korr "Add Activity to Friend"
-                            "type": "newButton",
+                        {
+                            "type": "button",
                             "name": "AddActivity",
                             "icon": "fa-plus",
                             "color": "green",
@@ -362,7 +362,6 @@ export class GuiModel {
                             "search": true,
                             "url": "/activity",
                             "page": "activitypagedetail"
-                            // "form": {"form": "ActivityForm"}
                         }
                     ]
                 },
@@ -379,7 +378,7 @@ export class GuiModel {
                             "color": "blue",
                             "form": {"form": "ActivityForm"}
                         },
-                        { // TODO Korr. "Add Friend to Activity"
+                        { // TODO Add Friend to Activity
                             "type": "newButton",
                             "name": "AddFriend",
                             "icon": "fa-plus",
@@ -388,7 +387,7 @@ export class GuiModel {
                                 "form": "AddFriendForm"
                             }
                         },
-                        { // List Friends by Activity
+                        {
                             "type": "list",
                             "icon": "fa-weixin",
                             "color": "wisteria",
